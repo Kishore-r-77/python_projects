@@ -1,5 +1,3 @@
-text_file=open("file.txt")
-content=text_file.read()
-print(content)
-
-text_file.close()
+with open("file.txt") as text_file:
+    content = text_file.read()
+    print(content)

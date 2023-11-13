@@ -16,5 +16,8 @@ csv_data = pandas.read_csv("weather_data.csv")
 # csv_dict = csv_data.to_dict()
 # print(csv_dict)
 
-temp_list=csv_data["temp"].to_list()
-print(temp_list)
+# temp_list=csv_data["temp"].to_list()
+# print(temp_list)
+
+# Calculating the average of a column
+print(csv_data["temp"].mean())

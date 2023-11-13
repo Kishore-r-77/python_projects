@@ -20,4 +20,14 @@ csv_data = pandas.read_csv("weather_data.csv")
 # print(temp_list)
 
 # Calculating the average of a column
-print(csv_data["temp"].mean())
+# print(csv_data["temp"].mean())
+# # Calculating the max of a column
+# print(csv_data["temp"].max())
+#
+# # Get the column
+# # print(csv_data["condition"])
+# print(csv_data.condition)
+
+# Get the Row
+print(csv_data[csv_data.day == "Monday"])
+print(csv_data[csv_data.temp == csv_data.temp.max()])

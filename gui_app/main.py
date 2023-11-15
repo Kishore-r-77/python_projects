@@ -4,6 +4,7 @@ window = tkinter.Tk()
 
 window.title("My First Gui App")
 window.minsize(width=500, height=300)
+window.config(padx=100, pady=100)
 
 
 def button_clicked():

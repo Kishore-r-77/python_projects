@@ -22,7 +22,7 @@ with smtplib.SMTP_SSL("smtp.gmail.com", 465) as connection:
     connection.login(user=my_email, password=password)
 
     # Send the email
-    connection.sendmail(from_addr=my_email, to_addrs=to_address, msg="Subject: Test\n\nHello Supreme")
+    connection.sendmail(from_addr=my_email, to_addrs=to_address, msg="Subject: Test\n\nHello Aswathy's Guy")
 
 # # Close the connection
 # connection.quit()

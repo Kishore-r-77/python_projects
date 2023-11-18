@@ -1,3 +1,50 @@
+import datetime as dt
+import random
+import smtplib
+
+now = dt.datetime.now()
+weekday = now.weekday()
+print(weekday)
+
+if weekday == 5:
+    with open("quotes.txt") as quote_file:
+        all_quotes = quote_file.readlines()
+        quote = random.choice(all_quotes)
+    print(quote)
+    my_email = "kishorework77@gmail.com"
+    to_address = "kishorelesnar77@gmail.com"
+    password="wzkpjrbpqbnkpiik"
+
+    my_email = "kishorework77@gmail.com"
+    to_address = "kishorelesnar77@gmail.com"
+    password = "wzkpjrbpqbnkpiik"
+
+    # Use SMTP_SSL and specify the port
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as connection:
+
+        # Login to the email account
+        connection.login(user=my_email, password=password)
+
+        # Send the email
+        connection.sendmail(
+            from_addr=my_email,
+            to_addrs=to_address, msg=f"Subject: Daily Quotes\n\n{quote}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # # my_email = "kishorework77@gmail.com"
 # # to_address = "kishorelesnar77@gmail.com"
 # # password="wzkpjrbpqbnkpiik"
@@ -27,10 +74,10 @@
 # # # Close the connection
 # # connection.quit()
 
-import datetime as dt
-
-now=dt.datetime.now()
-print(now.year)
-
-date_of_birth = dt.datetime(year=1996,month=4,day=21,hour=2,minute=10)
-print(date_of_birth)
+# import datetime as dt
+#
+# now=dt.datetime.now()
+# print(now.year)
+#
+# date_of_birth = dt.datetime(year=1996,month=4,day=21,hour=2,minute=10)
+# print(date_of_birth)

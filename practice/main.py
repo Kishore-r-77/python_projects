@@ -7,5 +7,14 @@ def swap(arr, pos1, pos2):
     arr[pos2] = temp
 
 
-swap(nums, 0, 1)
+def reverse_list(arr):
+    start = 0
+    end = len(arr)-1
+    while start < end:
+        swap(arr, start, end)
+        start += 1
+        end -= 1
+
+
+reverse_list(nums)
 print(nums)

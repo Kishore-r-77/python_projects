@@ -1,16 +1,12 @@
-nums = [22, 33, 44, 10, 8, 6]
+nums = [1, 2, 5, 9, 22]
 
 
-def finding_peak_element(arr):
-    start = 0
-    end = len(arr)
-    while start < end:
-        mid = int(start + (end - 1) / 2)
-        if arr[mid] > arr[mid + 1]:
-            end = mid
-        else:
-            start = mid + 1
-    return start
+def two_sum(arr, target):
+    for i in range(len(arr)):
+        for j in range(len(arr)):
+            if target == arr[i] + arr[j]:
+                return [i, j]
+    return [-1, -1]
 
 
-print(finding_peak_element(nums))
+print(two_sum(nums, 10))
